@@ -92,6 +92,7 @@
     "predeploy": "yarn test && yarn build",
     "linter": "yarn eslint src",
     "test": "node scripts/test.js --env=jsdom",
+    "coverage": "yarn test --coverage",
     "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js"
