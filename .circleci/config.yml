@@ -29,8 +29,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       - run: yarn test
-  deployment:
-    production:
-      branch: master
-      commands:
-        - yarn deploy
+  deploy:
+    steps:
+      - checkout
+      - run: 
+        name: Deploy to GitHub pages 
+        command: yarn deploy
