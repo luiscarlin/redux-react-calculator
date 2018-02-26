@@ -4,7 +4,7 @@ import Button from './presenters/Button'
 class App extends Component {
   render() {
     return (
-      <Button/>
+      <Button display='1'/>
     )
   }
 }

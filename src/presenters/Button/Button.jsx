@@ -5,8 +5,8 @@ class Button extends React.Component {
     return (
       <div>
         <button>
-          click here
-      </button>
+          { this.props.display }
+        </button>
       </div>
     )
   }

@@ -3,5 +3,5 @@ import { shallow } from 'enzyme'
 import Button from './'
 
 it('renders without crashing', () => {
-  shallow(<Button />)
+  shallow(<Button value={ '1234' }/>)
 })
