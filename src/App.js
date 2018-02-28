@@ -10,14 +10,13 @@ const store = configureStore();
 let onclick = (val) => {
   store.dispatch(pushToDisplay(val))
 }
-pushToDisplay
 
 class App extends Component {
   
   render() {
     return (
       <Provider store={store}>
-        <Button display='1' onclick={onclick} />
+        <Button value='1' onclick={onclick} />
       </Provider>
     )
   }
