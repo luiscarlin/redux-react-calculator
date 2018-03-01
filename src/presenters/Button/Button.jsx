@@ -4,8 +4,8 @@ class Button extends React.Component {
   render() {
     return (
       <div>
-        <button>
-          { this.props.display }
+        <button onClick={() => this.props.onclick("1")}>
+          { this.props.value }
         </button>
       </div>
     )
