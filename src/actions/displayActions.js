@@ -1,8 +1,10 @@
-import * as actionTypes from './actionTypes'
+import { PUSH_TO_DISPLAY } from './'
 
-export function pushToDisplay(char) {
+const pushToDisplay = (char) => {
   return {
-    type: actionTypes.PUSH_TO_DISPLAY,
+    type: PUSH_TO_DISPLAY,
     value: char
   }
 }
+
+export { pushToDisplay }
