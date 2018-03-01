@@ -4,7 +4,7 @@ import Button from './presenters/Button'
 import { Provider } from 'react-redux'
 import { pushToDisplay } from './actions/displayActions'
 
-const store = configureStore();
+const store = configureStore()
 
 let onclick = (val) => {
   store.dispatch(pushToDisplay(val))
