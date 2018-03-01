@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import configureStore from './store/configureStore'
 import Button from './presenters/Button'
 import { Provider } from 'react-redux'
-import { pushToDisplay } from './actions/displayActions'
+import { pushToDisplay } from './actions'
 
 const store = configureStore()
 
