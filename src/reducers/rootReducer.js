@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import helloReducer from './displayReducer'
+import displayReducer from './displayReducer'
 
 const rootReducer = combineReducers({
-  helloReducer
+  displayReducer
 })
 
 export default rootReducer;

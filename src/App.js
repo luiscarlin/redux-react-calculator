@@ -6,7 +6,6 @@ import { pushToDisplay } from './actions/displayActions'
 
 const store = configureStore();
 
-
 let onclick = (val) => {
   store.dispatch(pushToDisplay(val))
 }
