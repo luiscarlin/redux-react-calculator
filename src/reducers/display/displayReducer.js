@@ -1,4 +1,4 @@
-import { PUSH_TO_DISPLAY } from '../actions';
+import { PUSH_TO_DISPLAY } from '../../actions';
 
 export const DEFAULT_STATE = {
   display: ''
