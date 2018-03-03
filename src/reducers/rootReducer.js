@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import displayReducer from './displayReducer'
+import displayReducer from './display'
 
 const rootReducer = combineReducers({
   displayReducer
