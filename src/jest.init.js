@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 
 enzyme.configure({ adapter: new Adapter() })
 
+window.React = React
+window.shallow = enzyme.shallow
 window.mountComponentWithState = (Component , state) => {
 
   let dispatchMock = jest.fn()

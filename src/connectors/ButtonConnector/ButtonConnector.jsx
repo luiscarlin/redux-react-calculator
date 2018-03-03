@@ -3,7 +3,7 @@ import Button from '../../presenters/Button'
 import { pushToDisplay } from '../../actions'
 
 const mapDispatchToProps = dispatch => ({
-  onclick: (val) => { dispatch(pushToDisplay(val)) }
+  onClick: (val) => { dispatch(pushToDisplay(val)) }
 })
 
 export default connect(null, mapDispatchToProps)(Button)

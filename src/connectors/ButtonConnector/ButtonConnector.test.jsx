@@ -1,5 +1,4 @@
 import ButtonConnector from './'
-import React from 'react'
 import Button from '../../presenters/Button'
 import { pushToDisplay } from '../../actions'
 
