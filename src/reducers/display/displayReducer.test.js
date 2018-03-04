@@ -20,13 +20,18 @@ describe('Display Reducer', () => {
   })
 
   describe('when given the action to push to display', () => {
+    const currentState = {
+      display: '123'
+    }
+    const action = { 
+      type: PUSH_TO_DISPLAY,
+      value: '4'
+    }
     
-    it('returns a new state with display field updated', () => {
-      const currentState = {
-        display: '123'
-      }
-      const nextState = displayReducer(currentState, { type: PUSH_TO_DISPLAY, value: '4' })
-      expect(nextState.display).toEqual('1234')
+    it('returns a new state with only display field updated', () => {
+      const expectedState = Object.assign({}, currentState, { display: '1234' })
+      const nextState = displayReducer(currentState, action)
+      expect(nextState).toEqual(expectedState)
     })
   })
 })
