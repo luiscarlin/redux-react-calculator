@@ -5,7 +5,7 @@ import { pushToDisplay } from '../../actions'
 describe('Button Connector', () => {
   test('renders a Button component', () => {
     let mountedComponent = mountComponentWithState(<ButtonConnector value="hello" />, {})
-    expect(mountedComponent.node.contains(Button)).toBe(true)
+    expect(mountedComponent.node.find(Button)).toHaveLength(1)
   })
 
   test('dispatches action to push to display when clicked', () => {
