@@ -18,6 +18,6 @@ describe('Display Connector', () => {
   })
 
   it('renders an input element with value tied to display in state', () => {
-    expect(mountedComponent.node.find('input').props().defaultValue).toEqual('somevalue')
+    expect(mountedComponent.node.find('input').props().value).toEqual('somevalue')
   })
 })

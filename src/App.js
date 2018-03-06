@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import configureStore from './store/configureStore'
+import DisplayConnector from './connectors/DisplayConnector'
 import ButtonConnector from './connectors/ButtonConnector'
 import { Provider } from 'react-redux'
 
@@ -10,7 +11,10 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <ButtonConnector value='1'/>
+        <div>
+          <DisplayConnector />
+          <ButtonConnector value='1'/>
+        </div>
       </Provider>
     )
   }
