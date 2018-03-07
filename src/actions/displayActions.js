@@ -1,4 +1,4 @@
-import { PUSH_TO_DISPLAY } from './'
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from './'
 
 const pushToDisplay = (char) => {
   return {
@@ -7,4 +7,10 @@ const pushToDisplay = (char) => {
   }
 }
 
-export { pushToDisplay }
+const clearDisplay = () => {
+  return {
+    type: CLEAR_DISPLAY
+  }
+}
+
+export { pushToDisplay, clearDisplay }

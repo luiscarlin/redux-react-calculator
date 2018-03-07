@@ -1,5 +1,5 @@
-import { pushToDisplay } from './displayActions'
-import { PUSH_TO_DISPLAY } from './actionTypes'
+import { pushToDisplay, clearDisplay } from './displayActions'
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from './actionTypes'
 
-export { pushToDisplay }
-export { PUSH_TO_DISPLAY }
+export { pushToDisplay, clearDisplay }
+export { PUSH_TO_DISPLAY, CLEAR_DISPLAY }
