@@ -1,5 +1,5 @@
 import displayReducer from './'
-import { PUSH_TO_DISPLAY } from '../../actions';
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from '../../actions';
 
 describe('Display Reducer', () => {
   const INITIAL_STATE = {
@@ -23,6 +23,7 @@ describe('Display Reducer', () => {
     const currentState = {
       display: '123'
     }
+    
     const action = { 
       type: PUSH_TO_DISPLAY,
       value: '4'
@@ -30,6 +31,22 @@ describe('Display Reducer', () => {
     
     it('returns a new state with only display field updated', () => {
       const expectedState = Object.assign({}, currentState, { display: '1234' })
+      const nextState = displayReducer(currentState, action)
+      expect(nextState).toEqual(expectedState)
+    })
+  })
+
+  describe('when given the action to clear the display', () => {
+    const currentState = {
+      display: 'something here that I want to clear'
+    }
+    
+    const action = {
+      type: CLEAR_DISPLAY
+    }
+
+    it('returns a new state with display as empty string', () => {
+      const expectedState = Object.assign({}, currentState, { display: ''})
       const nextState = displayReducer(currentState, action)
       expect(nextState).toEqual(expectedState)
     })
