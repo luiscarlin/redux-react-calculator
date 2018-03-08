@@ -3,7 +3,7 @@ import configureStore from './store/configureStore'
 import DisplayConnector from './connectors/DisplayConnector'
 import ButtonConnector from './connectors/ButtonConnector'
 import { Provider } from 'react-redux'
-import AllCancelButtonConnector from './connectors/EqualsButtonConnector';
+import AllCancelButtonConnector from './connectors/AllCancelButtonConnector';
 
 const store = configureStore()
 
