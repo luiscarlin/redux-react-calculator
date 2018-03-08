@@ -2,7 +2,7 @@ import EqualsButtonConnector from './'
 import Button from '../../presenters/Button'
 import { clearDisplay } from '../../actions'
 
-describe('Button Connector', () => {
+describe('Equals Button Connector', () => {
   test('renders a Button component', () => {
     let mountedComponent = mountComponentWithState(<EqualsButtonConnector value="hello" />, {})
     expect(mountedComponent.node.find(Button)).toHaveLength(1)
