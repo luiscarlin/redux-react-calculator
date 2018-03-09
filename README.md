@@ -7,9 +7,10 @@ Calculator built using React and Redux while doing TDD
 ```bash
 git clone this-repo
 cd this-repo
+
 yarn install
 
-# Generate production build and run on GitHub Pages
+# Generate production build and publish production build on GitHub Pages
 yarn deploy
 
 # Generate production build
@@ -18,6 +19,9 @@ yarn build
 # Start local dev instance in localhost:3000
 yarn start
 
-# Run all tests
+# Run test watch
 yarn test
+
+# Run tests with coverage
+yarn test --coverage
 ```
