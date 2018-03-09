@@ -1,5 +1,4 @@
-import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from './'
-import { pushToDisplay, clearDisplay } from './'
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY, pushToDisplay, clearDisplay } from './'
 
 describe('displayActions', () => {
   it('creates an action to push text to display', () => {

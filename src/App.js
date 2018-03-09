@@ -3,13 +3,12 @@ import configureStore from './store/configureStore'
 import DisplayConnector from './connectors/DisplayConnector'
 import ButtonConnector from './connectors/ButtonConnector'
 import { Provider } from 'react-redux'
-import AllCancelButtonConnector from './connectors/AllCancelButtonConnector';
+import AllCancelButtonConnector from './connectors/AllCancelButtonConnector'
 
 const store = configureStore()
 
 class App extends Component {
-  
-  render() {
+  render () {
     return (
       <Provider store={store}>
         <div>
