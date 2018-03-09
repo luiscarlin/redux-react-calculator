@@ -7,8 +7,7 @@ enzyme.configure({ adapter: new Adapter() })
 
 window.React = React
 window.shallow = enzyme.shallow
-window.mountComponentWithState = (Component , state) => {
-
+window.mountComponentWithState = (Component, state) => {
   let dispatchMock = jest.fn()
 
   let fakeStore = {

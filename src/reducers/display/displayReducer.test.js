@@ -1,5 +1,5 @@
 import displayReducer from './'
-import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from '../../actions';
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from '../../actions'
 
 describe('Display Reducer', () => {
   const INITIAL_STATE = {
@@ -10,12 +10,12 @@ describe('Display Reducer', () => {
     let currentState = {
       display: 'something'
     }
-    const nextState = displayReducer(currentState, { type: "what", value: "do you want" })
+    const nextState = displayReducer(currentState, { type: 'what', value: 'do you want' })
     expect(nextState).toEqual(currentState)
   })
 
   it('should use the initial state as default', () => {
-    const state = displayReducer(undefined, { type: "hello" })
+    const state = displayReducer(undefined, { type: 'hello' })
     expect(state).toEqual(INITIAL_STATE)
   })
 
@@ -23,12 +23,12 @@ describe('Display Reducer', () => {
     const currentState = {
       display: '123'
     }
-    
-    const action = { 
+
+    const action = {
       type: PUSH_TO_DISPLAY,
       value: '4'
     }
-    
+
     it('returns a new state with only display field updated', () => {
       const expectedState = Object.assign({}, currentState, { display: '1234' })
       const nextState = displayReducer(currentState, action)
@@ -40,13 +40,13 @@ describe('Display Reducer', () => {
     const currentState = {
       display: 'something here that I want to clear'
     }
-    
+
     const action = {
       type: CLEAR_DISPLAY
     }
 
     it('returns a new state with display as empty string', () => {
-      const expectedState = Object.assign({}, currentState, { display: ''})
+      const expectedState = Object.assign({}, currentState, { display: '' })
       const nextState = displayReducer(currentState, action)
       expect(nextState).toEqual(expectedState)
     })
