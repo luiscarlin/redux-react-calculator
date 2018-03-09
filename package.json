@@ -95,7 +95,7 @@
   "scripts": {
     "pretest": "yarn linter",
     "predeploy": "yarn build",
-    "linter": "yarn eslint src",
+    "linter": "yarn eslint src --fix",
     "test": "node scripts/test.js --env=jsdom",
     "coverage": "yarn test --coverage",
     "deploy": "gh-pages -d build",
