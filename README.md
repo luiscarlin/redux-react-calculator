@@ -23,7 +23,4 @@ yarn start
 
 # Run test watch
 yarn test
-
-# Run tests with coverage
-yarn test --coverage
 ```
