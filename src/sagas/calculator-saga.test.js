@@ -1,3 +1,5 @@
+/* eslint no-eval: 0 */
+
 import { CALCULATE } from '../actions/actionTypes'
 import { take, select, call, put } from 'redux-saga/effects'
 import { pushToDisplay, clearDisplay } from '../actions/displayActions'
