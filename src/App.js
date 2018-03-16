@@ -23,6 +23,7 @@ class App extends Component {
           <ButtonConnector value='8'/>
           <ButtonConnector value='9'/>
           <ButtonConnector value='0'/>
+          <ButtonConnector value='.'/>
           <ButtonConnector value='+'/>
           <ButtonConnector value='-'/>
           <ButtonConnector value='*'/>
