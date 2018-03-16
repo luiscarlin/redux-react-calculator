@@ -44,4 +44,41 @@ describe('Calculator Saga', () => {
       expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE))
     })
   })
+
+  describe('display is empty', () => {
+    let gen
+
+    beforeEach(() => {
+      gen = calculatorSaga()
+      gen.next()
+      gen.next()
+    })
+
+    it('skips and continues catching CALCULATE dispatches when empty string', () => {
+      expect(gen.next('').value).toEqual(take(CALCULATE))
+    })
+
+    it('skips and continues catching CALCULATE dispatches when null', () => {
+      expect(gen.next(null).value).toEqual(take(CALCULATE))
+    })
+
+    it('skips and continues catching CALCULATE dispatches when undefined', () => {
+      expect(gen.next(undefined).value).toEqual(take(CALCULATE))
+    })
+  })
+
+  describe('when eval blows up', () => {
+    let gen
+
+    beforeEach(() => {
+      gen = calculatorSaga()
+      gen.next()
+      gen.next()
+      gen.next('1+')
+    })
+
+    it('skips and continues catching CALCULATE dispatches', () => {
+      expect(gen.throw('error').value).toEqual(take(CALCULATE))
+    })
+  })
 })
