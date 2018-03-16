@@ -4,6 +4,7 @@ import DisplayConnector from './connectors/DisplayConnector'
 import ButtonConnector from './connectors/ButtonConnector'
 import { Provider } from 'react-redux'
 import AllCancelButtonConnector from './connectors/AllCancelButtonConnector'
+import EqualsButtonConnector from './connectors/EqualsButtonConnector'
 
 const store = configureStore()
 
@@ -27,6 +28,7 @@ class App extends Component {
           <ButtonConnector value='+'/>
           <ButtonConnector value='-'/>
           <ButtonConnector value='*'/>
+          <EqualsButtonConnector value='='/>
           <AllCancelButtonConnector value="AC"/>
         </div>
       </Provider>

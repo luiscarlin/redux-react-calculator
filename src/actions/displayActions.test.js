@@ -1,4 +1,4 @@
-import { PUSH_TO_DISPLAY, CLEAR_DISPLAY, pushToDisplay, clearDisplay } from './'
+import { PUSH_TO_DISPLAY, CLEAR_DISPLAY, CALCULATE, pushToDisplay, clearDisplay, calculate } from './'
 
 describe('displayActions', () => {
   it('creates an action to push text to display', () => {
@@ -16,5 +16,12 @@ describe('displayActions', () => {
       type: CLEAR_DISPLAY
     }
     expect(clearDisplay()).toEqual(expectedAction)
+  })
+
+  it('creates an action to calculate the value in the display', () => {
+    const expectedAction = {
+      type: CALCULATE
+    }
+    expect(calculate()).toEqual(expectedAction)
   })
 })
