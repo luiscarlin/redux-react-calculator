@@ -1,5 +1,5 @@
 import displayReducer from './'
-import { PUSH_TO_DISPLAY, CLEAR_DISPLAY } from '../../actions'
+import { PUSH_TO_DISPLAY_TYPE, CLEAR_DISPLAY_TYPE } from '../../actions'
 
 describe('Display Reducer', () => {
   const INITIAL_STATE = {
@@ -25,7 +25,7 @@ describe('Display Reducer', () => {
     }
 
     const action = {
-      type: PUSH_TO_DISPLAY,
+      type: PUSH_TO_DISPLAY_TYPE,
       value: '4'
     }
 
@@ -42,7 +42,7 @@ describe('Display Reducer', () => {
     }
 
     const action = {
-      type: CLEAR_DISPLAY
+      type: CLEAR_DISPLAY_TYPE
     }
 
     it('returns a new state with display as empty string', () => {

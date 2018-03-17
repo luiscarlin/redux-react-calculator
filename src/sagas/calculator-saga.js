@@ -1,13 +1,13 @@
 /* eslint no-eval: 0 */
 
 import { take, call, put, select } from 'redux-saga/effects'
-import { CALCULATE } from '../actions/actionTypes'
+import { CALCULATE_TYPE } from '../actions/actionTypes'
 import { getPushToDisplayAction, getClearDisplayAction } from '../actions/displayActions'
 import { getDisplayValue } from '../selectors/display-selectors'
 
 export default function* calculatorSaga() {
   while (true) {
-    yield take(CALCULATE)
+    yield take(CALCULATE_TYPE)
 
     const currentValueInDisplay = yield select(getDisplayValue)
 

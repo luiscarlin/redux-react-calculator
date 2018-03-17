@@ -1,6 +1,6 @@
 /* eslint no-eval: 0 */
 
-import { CALCULATE } from '../actions/actionTypes'
+import { CALCULATE_TYPE } from '../actions/actionTypes'
 import { take, select, call, put } from 'redux-saga/effects'
 import { getPushToDisplayAction, getClearDisplayAction } from '../actions/displayActions'
 
@@ -16,7 +16,7 @@ describe('Calculator Saga', () => {
     
     it('catches a CALCULATE dispatch', () => {
       nextEffectWithPreviousResult = gen.next()
-      expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE))
+      expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE_TYPE))
     })
 
     it('retrieves the current value in the display', () => {
@@ -41,7 +41,7 @@ describe('Calculator Saga', () => {
 
     it('continues to handle dispatches', () => {
       nextEffectWithPreviousResult = gen.next()
-      expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE))
+      expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE_TYPE))
     })
   })
 
@@ -55,15 +55,15 @@ describe('Calculator Saga', () => {
     })
 
     it('skips and continues catching CALCULATE dispatches when empty string', () => {
-      expect(gen.next('').value).toEqual(take(CALCULATE))
+      expect(gen.next('').value).toEqual(take(CALCULATE_TYPE))
     })
 
     it('skips and continues catching CALCULATE dispatches when null', () => {
-      expect(gen.next(null).value).toEqual(take(CALCULATE))
+      expect(gen.next(null).value).toEqual(take(CALCULATE_TYPE))
     })
 
     it('skips and continues catching CALCULATE dispatches when undefined', () => {
-      expect(gen.next(undefined).value).toEqual(take(CALCULATE))
+      expect(gen.next(undefined).value).toEqual(take(CALCULATE_TYPE))
     })
   })
 
@@ -78,7 +78,7 @@ describe('Calculator Saga', () => {
     })
 
     it('skips and continues catching CALCULATE dispatches', () => {
-      expect(gen.throw('error').value).toEqual(take(CALCULATE))
+      expect(gen.throw('error').value).toEqual(take(CALCULATE_TYPE))
     })
   })
 })

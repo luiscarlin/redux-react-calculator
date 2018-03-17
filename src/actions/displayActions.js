@@ -1,21 +1,21 @@
-import { PUSH_TO_DISPLAY, CLEAR_DISPLAY, CALCULATE } from './'
+import { PUSH_TO_DISPLAY_TYPE, CLEAR_DISPLAY_TYPE, CALCULATE_TYPE } from './'
 
 const getPushToDisplayAction = (char) => {
   return {
-    type: PUSH_TO_DISPLAY,
+    type: PUSH_TO_DISPLAY_TYPE,
     value: char
   }
 }
 
 const getClearDisplayAction = () => {
   return {
-    type: CLEAR_DISPLAY
+    type: CLEAR_DISPLAY_TYPE
   }
 }
 
 const getCalculateAction = () => {
   return {
-    type: CALCULATE
+    type: CALCULATE_TYPE
   }
 }
 
