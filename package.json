@@ -90,9 +90,6 @@
       "react-app"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "scripts": {
     "pretest": "yarn linter",
     "predeploy": "yarn build",
