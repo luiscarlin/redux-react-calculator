@@ -1,22 +1,22 @@
 import { PUSH_TO_DISPLAY, CLEAR_DISPLAY, CALCULATE } from './'
 
-const pushToDisplay = (char) => {
+const getPushToDisplayAction = (char) => {
   return {
     type: PUSH_TO_DISPLAY,
     value: char
   }
 }
 
-const clearDisplay = () => {
+const getClearDisplayAction = () => {
   return {
     type: CLEAR_DISPLAY
   }
 }
 
-const calculate = () => {
+const getCalculateAction = () => {
   return {
     type: CALCULATE
   }
 }
 
-export { pushToDisplay, clearDisplay, calculate }
+export { getPushToDisplayAction, getClearDisplayAction, getCalculateAction }

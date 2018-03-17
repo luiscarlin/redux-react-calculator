@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import Button from '../../presenters/Button' 
-import { clearDisplay } from '../../actions'
+import { getClearDisplayAction } from '../../actions'
 
 const mapDispatchToProps = dispatch => ({
-  onClick: () => { dispatch(clearDisplay()) }
+  onClick: () => { dispatch(getClearDisplayAction()) }
 })
 
 export default connect(null, mapDispatchToProps)(Button)

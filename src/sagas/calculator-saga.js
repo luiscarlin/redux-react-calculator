@@ -2,7 +2,7 @@
 
 import { take, call, put, select } from 'redux-saga/effects'
 import { CALCULATE } from '../actions/actionTypes'
-import { pushToDisplay, clearDisplay } from '../actions/displayActions'
+import { getPushToDisplayAction, getClearDisplayAction } from '../actions/displayActions'
 import { getDisplayValue } from '../selectors/display-selectors'
 
 export default function* calculatorSaga() {
@@ -24,7 +24,7 @@ export default function* calculatorSaga() {
       continue
     }
 
-    yield put(clearDisplay())
-    yield put(pushToDisplay(newValueForDisplay))
+    yield put(getClearDisplayAction())
+    yield put(getPushToDisplayAction(newValueForDisplay))
   }
 }

@@ -1,6 +1,6 @@
 import AllCancelButtonConnector from './'
 import Button from '../../presenters/Button'
-import { clearDisplay } from '../../actions'
+import { getClearDisplayAction } from '../../actions'
 
 describe('All Cancel Button Connector', () => {
   test('renders a Button component', () => {
@@ -11,6 +11,6 @@ describe('All Cancel Button Connector', () => {
   test('dispatches action to clear display when clicked', () => {
     let mountedComponent = mountComponentWithState(<AllCancelButtonConnector value="hello" />, {})
     mountedComponent.node.find('button').simulate('click')
-    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(clearDisplay())
+    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(getClearDisplayAction())
   })
 })

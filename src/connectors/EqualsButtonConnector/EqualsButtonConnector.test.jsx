@@ -1,6 +1,6 @@
 import EqualsButtonConnector from './'
 import Button from '../../presenters/Button'
-import { calculate } from '../../actions'
+import { getCalculateAction } from '../../actions'
 
 describe('Equals Button Connector', () => {
   test('renders a Button component', () => {
@@ -11,6 +11,6 @@ describe('Equals Button Connector', () => {
   test('dispatches action to calculate when clicked', () => {
     let mountedComponent = mountComponentWithState(<EqualsButtonConnector value="hello" />, {})
     mountedComponent.node.find('button').simulate('click')
-    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(calculate())
+    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(getCalculateAction())
   })
 })

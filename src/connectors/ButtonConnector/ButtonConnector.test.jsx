@@ -1,6 +1,6 @@
 import ButtonConnector from './'
 import Button from '../../presenters/Button'
-import { pushToDisplay } from '../../actions'
+import { getPushToDisplayAction } from '../../actions'
 
 describe('Button Connector', () => {
   test('renders a Button component', () => {
@@ -11,6 +11,6 @@ describe('Button Connector', () => {
   test('dispatches action to push to display when clicked', () => {
     let mountedComponent = mountComponentWithState(<ButtonConnector value="hello" />, {})
     mountedComponent.node.find('button').simulate('click')
-    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(pushToDisplay("hello"))
+    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(getPushToDisplayAction("hello"))
   })
 })

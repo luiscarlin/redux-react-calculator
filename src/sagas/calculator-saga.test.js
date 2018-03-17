@@ -2,7 +2,7 @@
 
 import { CALCULATE } from '../actions/actionTypes'
 import { take, select, call, put } from 'redux-saga/effects'
-import { pushToDisplay, clearDisplay } from '../actions/displayActions'
+import { getPushToDisplayAction, getClearDisplayAction } from '../actions/displayActions'
 
 let getDisplayValueSpy = jest.fn()
 jest.setMock('../selectors/display-selectors', { getDisplayValue: getDisplayValueSpy })
@@ -31,12 +31,12 @@ describe('Calculator Saga', () => {
 
     it('dispatches an action to clear the display', () => {
       nextEffectWithPreviousResult = gen.next('1')
-      expect(nextEffectWithPreviousResult.value).toEqual(put(clearDisplay()))
+      expect(nextEffectWithPreviousResult.value).toEqual(put(getClearDisplayAction()))
     })
 
     it('dispatches an action to push the evaluated result to the display', () => {
       nextEffectWithPreviousResult = gen.next('1')
-      expect(nextEffectWithPreviousResult.value).toEqual(put(pushToDisplay('1')))
+      expect(nextEffectWithPreviousResult.value).toEqual(put(getPushToDisplayAction('1')))
     })
 
     it('continues to handle dispatches', () => {
