@@ -11,6 +11,6 @@ describe('Button Connector', () => {
   test('dispatches action to push to display when clicked', () => {
     let mountedComponent = mountComponentWithState(<ButtonConnector value="hello" />, {})
     mountedComponent.node.find('button').simulate('click')
-    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(getPushToDisplayAction("hello"))
+    expect(mountedComponent.dispatchMock).toHaveBeenCalledWith(getPushToDisplayAction('hello'))
   })
 })

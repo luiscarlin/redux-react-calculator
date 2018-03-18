@@ -13,7 +13,7 @@ describe('Calculator Saga', () => {
   describe('happy path', () => {
     let nextEffectWithPreviousResult, gen
     gen = calculatorSaga()
-    
+
     it('catches a CALCULATE dispatch', () => {
       nextEffectWithPreviousResult = gen.next()
       expect(nextEffectWithPreviousResult.value).toEqual(take(CALCULATE_TYPE))

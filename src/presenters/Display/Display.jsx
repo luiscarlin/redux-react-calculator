@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Display extends React.Component {
-  render() {
+  render () {
     return (
       <div>
         <input value={this.props.value} readOnly />

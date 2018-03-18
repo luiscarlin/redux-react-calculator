@@ -5,7 +5,7 @@ import { CALCULATE_TYPE } from '../actions/actionTypes'
 import { getPushToDisplayAction, getClearDisplayAction } from '../actions/displayActions'
 import { getDisplayValue } from '../selectors/display-selectors'
 
-export default function* calculatorSaga() {
+export default function * calculatorSaga () {
   while (true) {
     yield take(CALCULATE_TYPE)
 
@@ -19,8 +19,7 @@ export default function* calculatorSaga() {
 
     try {
       newValueForDisplay = yield call(eval, currentValueInDisplay)
-    }
-    catch(e) {
+    } catch (e) {
       continue
     }
 
