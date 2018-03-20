@@ -4,6 +4,7 @@
     "react-app"
   ],
   "globals": {
+    "shallow": true,
     "mountComponentWithState": true,
     "React": true
   }
