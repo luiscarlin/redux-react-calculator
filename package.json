@@ -97,7 +97,7 @@
     ]
   },
   "scripts": {
-    "pretest": "yarn linter",
+    "pretest": "yarn linter && yarn build-css",
     "predeploy": "yarn build",
     "linter": "yarn eslint src/**/*",
     "test": "node scripts/test.js --env=jsdom",
