@@ -20,7 +20,7 @@ class App extends Component {
             <AllCancelButtonConnector value="AC"/>
             <ButtonConnector value='('/>
             <ButtonConnector value=')'/>
-            <ButtonConnector value='^'/>
+            <ButtonConnector value='**'/>
             <ButtonConnector value='7'/>
             <ButtonConnector value='8'/>
             <ButtonConnector value='9'/>
