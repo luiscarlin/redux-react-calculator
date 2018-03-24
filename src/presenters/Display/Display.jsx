@@ -1,11 +1,10 @@
 import React from 'react'
+import './display.css'
 
 class Display extends React.Component {
   render () {
     return (
-      <div>
-        <input value={this.props.value} readOnly />
-      </div>
+      <input className="display" value={this.props.value} readOnly />
     )
   }
 }
