@@ -1,3 +1,7 @@
 .calculator-container {
-  width: 20rem;
+  display: flex;
+  width: 23rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
