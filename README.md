@@ -2,7 +2,7 @@
 
 A calculator built using React and Redux while doing TDD
 
-See it running here https://luiscarlin.github.io/redux-react-calculator/
+See the production build running here https://luiscarlin.github.io/redux-react-calculator/
 
 ## Run
 
@@ -12,16 +12,13 @@ cd this-repo
 
 yarn install
 
-# Generate production build and publish production build on GitHub Pages
+# Generate production build and publish it to GitHub Pages
 yarn deploy
-
-# Generate production build
-yarn build
 
 # Start local dev instance in localhost:3000
 yarn start
 
-# Run test watch
+# Run Jest test watch
 yarn test
 
 # Run tests with coverage
