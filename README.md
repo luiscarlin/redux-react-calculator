@@ -1,6 +1,6 @@
 # Redux React Calculator [![CircleCI](https://circleci.com/gh/luiscarlin/redux-react-calculator/tree/master.svg?style=svg)](https://circleci.com/gh/luiscarlin/redux-react-calculator/tree/master)
 
-A calculator built using React and Redux while doing TDD
+A simple calculator built using React and Redux while doing TDD
 
 See the production build running here https://luiscarlin.github.io/redux-react-calculator/
 
